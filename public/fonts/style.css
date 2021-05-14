@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'cafe24';
+  src: local(Cafe24Ohsquareair),
+    url(Cafe24Ohsquareair.ttf) format('truetype'),
+    url(Cafe24Ohsquareair.woff) format('woff');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}
