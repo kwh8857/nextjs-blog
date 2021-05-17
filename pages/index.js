@@ -9,6 +9,7 @@ export default function Home() {
       <main>
         <h1 className="title">
           Welcome to <Link href="/posts/Test"> Next.js! </Link>
+          <Link href="/community/community">community</Link>
         </h1>
         <p className="description">
           Get started by editing <code> pages / index.js </code>

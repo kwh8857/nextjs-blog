@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import KaKaoLogin from "react-kakao-login";
@@ -45,7 +45,10 @@ function Test() {
       box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
     }
   `;
-
+  const [display, setDisplay] = useState("");
+  const __test = useCallback(() => {
+    setDisplay("테스트 완료");
+  }, []);
   useEffect(() => {
     const { naver } = window;
     const naverLogin = new naver.LoginWithNaverId({
@@ -74,6 +77,8 @@ function Test() {
   }, [router]);
   return (
     <Login>
+      <div onClick={__test}>누르면 튀어나옴</div>
+      <div>{display}</div>
       <div className="test">로그인</div>
       <input type="text" className="id-box" />
       <input type="text" className="pw-box" />
